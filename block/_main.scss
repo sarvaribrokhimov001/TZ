@@ -1,0 +1,126 @@
+.main {
+    width: 800px;
+    height: 500px;
+    margin: -30px auto;
+    border-radius: 15px;
+    display: flex;
+    gap: 45px;
+
+    &__container {
+        width: 450px;
+        height: 440px;
+        border-radius: 15px;
+        background-color: black;
+    }
+
+    &__container__title {
+        color: red;
+        font-weight: 700;
+        padding: 30px;
+    }
+
+    &__container__sections {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__container__section {
+        width: 350px;
+        height: 60px;
+        border-radius: 15px;
+        border: 1px solid white;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__container__section__text {
+        color: white;
+        font-weight: 700;
+        padding: 18px 10px;
+        text-transform: uppercase;
+    }
+
+    &__container__section__price {
+        color: red;
+        font-weight: 700;
+        padding: 18px 17px;
+    }
+
+    &__sml__containers {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__sml__container__1 {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: black;
+    }
+
+    &__sml__container__1__title {
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &__sml__container__1__select {
+        width: 220px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: black;
+        color: cyan;
+        border: 1px sold cyan;
+    }
+
+    &__sml__container__1__input {
+        font-size: 15px;
+        padding: 0px 10px;
+    }
+
+    &__sml__container__1__btn {
+        border: 3px solid cyan;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__sml__container__1__btn:hover {
+        color: green;
+        border: 3px solid green;
+        transition: all 0.7s ease;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__sml__container__2 {
+        width: 300px;
+        height: 100px;
+        border-radius: 15px;
+        background-color: black;
+    }
+
+    &__sml__container__2__title {
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px;
+    }
+
+    &__sml__container__2__texts {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &__sml__container__2__text {
+        color: white;
+    }
+}
