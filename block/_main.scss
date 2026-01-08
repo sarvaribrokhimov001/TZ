@@ -78,12 +78,15 @@
         border-radius: 10px;
         background-color: black;
         color: cyan;
-        border: 1px sold cyan;
+        border: 3px solid cyan;
+        padding: 0px 7px;
+        text-transform: capitalize;
     }
 
     &__sml__container__1__input {
         font-size: 15px;
         padding: 0px 10px;
+        border: 3px solid cyan;
     }
 
     &__sml__container__1__btn {
@@ -116,8 +119,7 @@
 
     &__sml__container__2__texts {
         display: flex;
-        justify-content: space-between;
-        
+        justify-content: space-evenly;   
     }
 
     &__sml__container__2__text {

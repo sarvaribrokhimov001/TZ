@@ -1,30 +1,107 @@
-const api = `https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population,languages,currencies`;
-const countriesFlags = document.querySelector('.countries__flags');
+// const api = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether,binancecoin&vs_currencies=usd";
+// const mainContainerSections = document.querySelector('.main__container__sections');
+
+// fetch(api)
+// .then(res => res.json())
+// .then((data) => {
+//     showData(data);
+// });
+
+// function showData(data) {
+//     data.map((item) => {
+//         const {} = item;
+//         // console.log(flags);
+//         console.log(data);
+        
+//     mainContainerSections.innerHTML += `
+    
+//                   <div>
+//                     <div class="main__container__section">
+//                         <p class="main__container__section__text"> binancecoin </p>
+//                         <p class="main__container__section__price"> $919,79 </p>
+//                     </div> <!-- main__container__section -->
+
+//                       <div class="main__container__section">
+//                         <p class="main__container__section__text"> bitcoin </p>
+//                         <p class="main__container__section__price"> $94 280 </p>
+//                     </div> <!-- main__container__section -->
+
+//                       <div class="main__container__section">
+//                         <p class="main__container__section__text"> ethereum </p>
+//                         <p class="main__container__section__price"> $3 298,57 </p>
+//                     </div> <!-- main__container__section -->
+
+//                       <div class="main__container__section">
+//                         <p class="main__container__section__text"> tether </p>
+//                         <p class="main__container__section__price"> $1 </p>
+//                     </div> <!-- main__container__section -->
+//                   </div>
+//     `
+//     });
+//  };
+
+
+
+
+
+
+
+
+ Toastify({
+    text: "Dasturimizga xush kelibsiz !",
+    duration: 3500,
+    gravity: "top",
+    position: "center",
+    close: true,
+    style: {
+      background: "linear-gradient(to right, black, black )",
+      borderRadius: "30px",
+      color: "cyan",
+      boxShadow: "0 4px 12px rgba(0, 255, 255, 0.4)"
+    }
+  }).showToast();
+
+  Toastify({
+    text: "Assalomu alaykum",
+    duration: 3500,
+    gravity: "top",
+    position: "center",
+    close: true,
+    style: {
+      background: "linear-gradient(to right, black, black)",
+      borderRadius: "30px",
+      color: "cyan",
+      boxShadow: "0 4px 12px rgba(0, 255, 255, 0.4)"
+    }
+  }).showToast();
+
+const api = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether,binancecoin&vs_currencies=usd";
+const mainContainerSections = document.querySelector(".main__container__sections");
 
 fetch(api)
-.then(res => res.json())
-.then((data) => {
-    showCountry(data);
-});
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    
+    mainContainerSections.innerHTML = `
+      <div class="main__container__section">
+        <p class="main__container__section__text">BinanceCoin</p>
+        <p class="main__container__section__price">$${data.binancecoin.usd}</p>
+      </div>
 
-function showCountry(data) {
-    data.map((item) => {
-        const {flags , region , name , capital , currencies , languages , population} = item;
-        // console.log(flags);
-        console.log(data);
-        
-    countriesFlags.innerHTML += `
-    
-         <div class="every__container">
-           <img src=${flags.svg} width='140' alt="">
-           <p class="country__name"> <span> Name: </span> ${name.common} </p>
-           <p class="country__region"> <span> Region: </span> ${region} </p>
-           <p class="country__capital"> <span> Capital: </span> ${capital} </p>
-           <p class="country__currencies"> <span> Currency: </span> ${currencies} </p>
-           <p class="country__languages"> <span> Language: </span> ${languages} </p>
-           <p class="country__population"> <span> Population: </span> ${population} </p>
-        </div> <!-- every__container -->
-    
-    `
-    })  
- };
+      <div class="main__container__section">
+        <p class="main__container__section__text">bitcoin</p>
+        <p class="main__container__section__price">$${data.bitcoin.usd}</p>
+      </div>
+
+      <div class="main__container__section">
+        <p class="main__container__section__text">Ethereum</p>
+        <p class="main__container__section__price">$${data.ethereum.usd}</p>
+      </div>
+
+      <div class="main__container__section">
+        <p class="main__container__section__text">Tether</p>
+        <p class="main__container__section__price">$${data.tether.usd}</p>
+      </div>
+    `;
+  });
