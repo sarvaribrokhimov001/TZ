@@ -36,23 +36,23 @@ fetch(`${api}`)
     
     mainContainerSections.innerHTML = `
       <div class="main__container__section">
-        <p class="main__container__section__text">BinanceCoin</p>
-        <p class="main__container__section__price">$${data.binancecoin.usd}</p>
+        <p class="main__container__section__text"> BinanceCoin </p>
+        <p class="main__container__section__price"> $${data.binancecoin.usd} </p>
       </div>
 
       <div class="main__container__section">
-        <p class="main__container__section__text">bitcoin</p>
-        <p class="main__container__section__price">$${data.bitcoin.usd}</p>
+        <p class="main__container__section__text"> Bitcoin </p>
+        <p class="main__container__section__price"> $${data.bitcoin.usd} </p>
       </div>
 
       <div class="main__container__section">
-        <p class="main__container__section__text">Ethereum</p>
-        <p class="main__container__section__price">$${data.ethereum.usd}</p>
+        <p class="main__container__section__text"> Ethereum </p>
+        <p class="main__container__section__price"> $${data.ethereum.usd} </p>
       </div>
 
       <div class="main__container__section">
-        <p class="main__container__section__text">Tether</p>
-        <p class="main__container__section__price">$${data.tether.usd}</p>
+        <p class="main__container__section__text"> Tether </p>
+        <p class="main__container__section__price"> $${data.tether.usd} </p>
       </div>
     `;
   });
